@@ -219,11 +219,11 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# dacmod_parts:THS6024
+# dacpmod-rescue:THS6024-dacmod_parts
 #
-DEF dacmod_parts:THS6024 U 0 40 Y Y 4 F N
+DEF dacpmod-rescue:THS6024-dacmod_parts U 0 40 Y Y 4 F N
 F0 "U" 150 -200 50 H V L CNN
-F1 "dacmod_parts:THS6024" -150 0 50 H V C CNN
+F1 "dacpmod-rescue:THS6024-dacmod_parts" -150 0 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -260,7 +260,7 @@ X BIAS1 11 -600 -400 200 R 50 50 3 1 I
 X Vs- 12 -600 -700 200 R 50 50 3 1 W
 X Vs+ 13 -600 400 200 R 50 50 3 1 W
 X IN- 16 -600 -200 200 R 50 50 3 1 I
-X OUT 23-UC 700 0 200 L 50 50 3 1 O
+X OUT 17 700 0 200 L 50 50 3 1 O
 X Iadj 7 -600 -800 200 R 50 50 3 1 I
 X IN+ 8 -600 200 200 R 50 50 3 1 I
 X OUT 14 700 0 200 L 50 50 4 1 O
