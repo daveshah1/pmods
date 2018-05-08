@@ -1428,16 +1428,16 @@ $EndComp
 $Comp
 L power:GND #PWR0117
 U 1 1 5B085E27
-P 8400 10100
-F 0 "#PWR0117" H 8400 9850 50  0001 C CNN
-F 1 "GND" V 8405 9972 50  0000 R CNN
-F 2 "" H 8400 10100 50  0001 C CNN
-F 3 "" H 8400 10100 50  0001 C CNN
-	1    8400 10100
+P 8800 10100
+F 0 "#PWR0117" H 8800 9850 50  0001 C CNN
+F 1 "GND" V 8805 9972 50  0000 R CNN
+F 2 "" H 8800 10100 50  0001 C CNN
+F 3 "" H 8800 10100 50  0001 C CNN
+	1    8800 10100
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8400 10100 8200 10100
+	8800 10100 8550 10100
 $Comp
 L power:VCC #PWR0118
 U 1 1 5B09384A
@@ -1794,65 +1794,104 @@ $EndComp
 Wire Wire Line
 	1300 5900 1450 5900
 Wire Wire Line
-	1450 5400 950  5400
+	1450 6550 950  6550
 Wire Wire Line
-	1450 5500 950  5500
+	1450 6450 950  6450
 Wire Wire Line
-	1450 5600 950  5600
+	1450 6350 950  6350
 Wire Wire Line
-	1450 5700 950  5700
+	1450 6250 950  6250
 Wire Wire Line
-	1950 5400 2450 5400
+	1950 6450 2450 6450
 Wire Wire Line
-	1950 5500 2450 5500
+	1950 6350 2450 6350
 Wire Wire Line
-	1950 5600 2450 5600
+	1950 6250 2450 6250
 Wire Wire Line
 	1950 5700 2450 5700
-Text Label 950  5400 0    50   ~ 0
+Text Label 950  6550 0    50   ~ 0
 D0
-Text Label 950  5500 0    50   ~ 0
+Text Label 950  6450 0    50   ~ 0
 D2
-Text Label 950  5600 0    50   ~ 0
+Text Label 950  6350 0    50   ~ 0
 D4
-Text Label 950  5700 0    50   ~ 0
+Text Label 950  6250 0    50   ~ 0
 D6
-Text Label 2450 5400 2    50   ~ 0
+Text Label 2450 6450 2    50   ~ 0
 D1
-Text Label 2450 5500 2    50   ~ 0
+Text Label 2450 6350 2    50   ~ 0
 D3
-Text Label 2450 5600 2    50   ~ 0
+Text Label 2450 6250 2    50   ~ 0
 D5
 Text Label 2450 5700 2    50   ~ 0
 D7
 Wire Wire Line
-	1450 6250 950  6250
+	1450 5700 950  5700
 Wire Wire Line
-	1450 6350 950  6350
+	1450 5600 950  5600
 Wire Wire Line
-	1450 6450 950  6450
+	1450 5500 950  5500
 Wire Wire Line
-	1450 6550 950  6550
-Text Label 950  6250 0    50   ~ 0
+	1450 5400 950  5400
+Text Label 950  5700 0    50   ~ 0
 D8
-Text Label 950  6350 0    50   ~ 0
+Text Label 950  5600 0    50   ~ 0
 D10
-Text Label 950  6450 0    50   ~ 0
+Text Label 950  5500 0    50   ~ 0
 D12
-Text Label 950  6550 0    50   ~ 0
+Text Label 950  5400 0    50   ~ 0
 CLK
 Wire Wire Line
-	1950 6250 2450 6250
+	1950 5600 2450 5600
 Wire Wire Line
-	1950 6350 2450 6350
+	1950 5500 2450 5500
 Wire Wire Line
-	1950 6450 2450 6450
-Text Label 2450 6250 2    50   ~ 0
+	1950 5400 2450 5400
+Text Label 2450 5600 2    50   ~ 0
 D9
-Text Label 2450 6350 2    50   ~ 0
+Text Label 2450 5500 2    50   ~ 0
 D11
-Text Label 2450 6450 2    50   ~ 0
+Text Label 2450 5400 2    50   ~ 0
 D13
 NoConn ~ 1950 6550
 NoConn ~ 18000 4400
+$Comp
+L Device:C_Small C30
+U 1 1 5B151565
+P 8550 9800
+F 0 "C30" H 8642 9846 50  0000 L CNN
+F 1 "10n" H 8642 9755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad0.84x1.00mm_HandSolder" H 8550 9800 50  0001 C CNN
+F 3 "~" H 8550 9800 50  0001 C CNN
+	1    8550 9800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C31
+U 1 1 5B15161B
+P 8550 10400
+F 0 "C31" H 8642 10446 50  0000 L CNN
+F 1 "10n" H 8642 10355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad0.84x1.00mm_HandSolder" H 8550 10400 50  0001 C CNN
+F 3 "~" H 8550 10400 50  0001 C CNN
+	1    8550 10400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 10300 8550 10100
+Connection ~ 8550 10100
+Wire Wire Line
+	8550 10100 8200 10100
+Wire Wire Line
+	8550 10100 8550 9900
+Wire Wire Line
+	8550 9700 8550 9550
+Wire Wire Line
+	8550 9550 8200 9550
+Connection ~ 8200 9550
+Wire Wire Line
+	8200 10700 8550 10700
+Wire Wire Line
+	8550 10700 8550 10500
+Connection ~ 8200 10700
 $EndSCHEMATC
