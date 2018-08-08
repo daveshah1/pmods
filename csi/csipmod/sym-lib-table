@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name kipart)(type Legacy)(uri /home/david/ecp85/kipart.lib)(options "")(descr ""))
+)
