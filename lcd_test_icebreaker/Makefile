@@ -19,7 +19,7 @@ SEED = 12
 lcd_test.json: $(SOURCES)
 	yosys -p 'synth_ice40 -top top -json lcd_test.json' $(SOURCES)
 
-lcd_test.asc: lcd_test.json lcd_test.pcf
+lcd_test.asc: lcd_test.json icebreaker.pcf
 	${NEXTPNR_DIR}/nextpnr-ice40 --seed $(SEED) --freq 30 --package $(ICEBREAKER_PACKAGE) --$(ICEBREAKER_DEVICE) --asc $@ --pcf $(ICEBREAKER_PIN_DEF) --json $<
 
 lcd_test.bin: lcd_test.asc
@@ -29,6 +29,6 @@ prog: lcd_test.bin
 	iceprog $<
 
 clean:
-	rm lcd_test.blif lcd_test.asc lcd_test.bin
+	rm -f lcd_test.json lcd_test.asc lcd_test.bin
 
 .PHONY: prog_sram prog_flash reset_halt reset_boot clean
